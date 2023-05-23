@@ -1,11 +1,14 @@
-import random
+from random import randint
 
-x = random.randint(1, 100)
-print(x)
 
-Chute = input("Digite o numero:")
+def numero_aleatorio():
+    aleatorio = randint(1, 50)
+    chute = 0
 
-if Chute == x:
-    print("Parabéns")
-else:
-    print("Podre")
+    while aleatorio != chute:
+        chute = int(input("digite um valor (1 a 50):"))
+        if aleatorio == chute:
+            print("Parabens!")
+        else:
+            print('Podre')
+    numero_aleatorio()
