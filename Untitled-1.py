@@ -1,13 +1,11 @@
-print("________________________________________")
-print("Bem Vindo Wendel, advinhe o numero fi")
-print("________________________________________")
+import random
+
+x = random.randint(1, 100)
+print(x)
+
 Chute = input("Digite o numero:")
 
-Numero = 24
-
-if Chute == Numero:
-    print("PARABENS KRL VC ACERTOU")
+if Chute == x:
+    print("Parabéns")
 else:
-    print("Voce errou tenta de novo")
-   
-
+    print("Podre")
