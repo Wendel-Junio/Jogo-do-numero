@@ -10,7 +10,7 @@ rodada = 1
 for rodada in range(1, numero_de_tentativas + 1):
 
     print("Tentativa {} de {}".format(rodada, numero_de_tentativas))
-    chute_str = input("Digite o seu numero: ")
+    chute_str = input("Digite um numero de 1 a 100!: ")
     print("Você digitou ", chute_str)
     chute = int(chute_str)
 
