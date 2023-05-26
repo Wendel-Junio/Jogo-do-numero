@@ -1,14 +1,37 @@
-from random import randint
+import random
+
+print("Bem vindo ao jogo de advinhação ")
 
 
-def numero_aleatorio():
-    aleatorio = randint(1, 50)
-    chute = 0
+numero_secreto = round(random.random() * 100)
+numero_de_tentativas = 3
+rodada = 1
 
-    while aleatorio != chute:
-        chute = int(input("digite um valor (1 a 50):"))
-        if aleatorio == chute:
-            print("Parabens!")
-        else:
-            print('Podre')
-    numero_aleatorio()
+for rodada in range(1, numero_de_tentativas + 1):
+
+    print("Tentativa {} de {}".format(rodada, numero_de_tentativas))
+    chute_str = input("Digite o seu numero: ")
+    print("Você digitou ", chute_str)
+    chute = int(chute_str)
+
+    if chute <1 or chute > 100:
+        print("Ei ei ei, você deve chutar um número de 1 a 100!!")
+        continue
+
+    acertou = chute == numero_secreto
+    maior = chute > numero_secreto
+    menor = chute < numero_secreto
+
+    if acertou:
+        print("Voce acertou ebaa")
+        break
+    else:
+        if maior:
+            print("Voce errou, o seu chute foi maior que o numero secreto")
+        elif menor:
+            print("Voce errou, o seu chute foi menor que o numero secreto")
+
+    rodada = rodada + 1
+
+
+print("Fim do jogo")
