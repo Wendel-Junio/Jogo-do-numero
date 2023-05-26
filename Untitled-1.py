@@ -2,9 +2,20 @@ import random
 
 print("Bem vindo ao jogo de advinhação ")
 
-numero_secreto = random.randrange(1 , 101)
-numero_de_tentativas = 3
-rodada = 1
+numero_secreto = random.randrange(1, 101)
+numero_de_tentativas = 0
+
+print("Qual o0 nivel de dificuldade?")
+print("(1) Fácil  (2) Médio  (3) Dificil")
+
+nivel = int(input("Qual nivel você escolhe? "))
+
+if nivel == 1:
+    numero_de_tentativas = 20
+elif nivel == 2:
+    numero_de_tentativas = 10
+else:
+    numero_de_tentativas = 5
 
 
 for rodada in range(1, numero_de_tentativas + 1):
@@ -14,7 +25,7 @@ for rodada in range(1, numero_de_tentativas + 1):
     print("Você digitou ", chute_str)
     chute = int(chute_str)
 
-    if chute <1 or chute > 100:
+    if chute < 1 or chute > 100:
         print("Ei ei ei, você deve chutar um número de 1 a 100!!")
         continue
 
