@@ -2,10 +2,10 @@ import random
 
 print("Bem vindo ao jogo de advinhação ")
 
-
-numero_secreto = round(random.random() * 100)
+numero_secreto = random.randrange(1 , 101)
 numero_de_tentativas = 3
 rodada = 1
+
 
 for rodada in range(1, numero_de_tentativas + 1):
 
