@@ -1,11 +1,19 @@
+import time
 import random
 
-print("Bem vindo ao jogo de advinhação ")
+print("Ola, me chamo Clarissa, sou sua inteligencia artificial preferida... ér você sabe q eu nao sou um I.A, MAS VAMOS FINGIR QUE EU SOU. :)")
+time.sleep(1.25)
+print("E hoje iremos jogar um jogo onde eu pensarei em um numero e você tera que descobrir o numero!")
+time.sleep(1.25)
+print("Entao seja muito bem vindo ao jogo de advinhação ")
+print("Primeiro quero saber seu nome :)")
 
+
+nome = input("Digite aqui seu nome: ")
 numero_secreto = random.randrange(1, 101)
 numero_de_tentativas = 0
 
-print("Qual o0 nivel de dificuldade?")
+print("Qual o nivel de dificuldade hoje", nome,"?")
 print("(1) Fácil  (2) Médio  (3) Dificil")
 
 nivel = int(input("Qual nivel você escolhe? "))
@@ -44,5 +52,5 @@ for rodada in range(1, numero_de_tentativas + 1):
 
     rodada = rodada + 1
 
-
-print("Fim do jogo")
+print("Fim do jogo, foi muuuito divertido jogar com voce", nome, "sempre que quiser eu estarei te esperando ok? byee")
+print("____________________Clarissa desligando...____________________")
